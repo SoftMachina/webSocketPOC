@@ -1,4 +1,4 @@
-import { Klient } from "./Klient";
+import { Klient } from "./klient";
 import { Zerver } from "./zerver";
 
 const zerver = new Zerver('localhost', 8080);

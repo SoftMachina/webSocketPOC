@@ -1,9 +1,9 @@
 #!/bin/zsh
 
-ls | grep '.js$' | xargs rm
+rm -r lib/
 
-tsc index.ts
+npm run build
 
-node index.js
+node lib/index.js
 
 
