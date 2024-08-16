@@ -1,9 +1,9 @@
 #!/bin/zsh
 
-rm -r lib/
+rm -r dist/
 
 npm run build
 
-node lib/index.js
+node dist/index.js
 
 

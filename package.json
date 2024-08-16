@@ -5,8 +5,7 @@
   "main": "index.ts",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "babel src --out-dir lib --extensions '.ts'"
+    "build": "tsc"
   },
   "author": "Kai Klemmer",
   "license": "ISC",
@@ -14,10 +13,6 @@
     "ws": "^8.18.0"
   },
   "devDependencies": {
-    "@babel/cli": "^7.24.8",
-    "@babel/core": "^7.25.2",
-    "@babel/preset-env": "^7.25.3",
-    "@babel/preset-typescript": "^7.24.7",
     "@types/ws": "^8.5.12"
   }
 }
