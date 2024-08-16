@@ -1,4 +1,4 @@
-import WebSocket, { WebSocketServer } from "ws";
+import { WebSocketServer } from "ws";
 export class Zerver {
     host: string;
     port: number;
@@ -7,7 +7,7 @@ export class Zerver {
     constructor(host: string, port: number) {
         this.host = host;
         this.port = port;
-        this.ws = new WebSocket.Server({
+        this.ws = new WebSocketServer({
             port: this.port,
             host: this.host,
         });
