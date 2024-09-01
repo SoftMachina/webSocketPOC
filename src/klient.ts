@@ -1,11 +1,9 @@
-export class Klient {
-    ws: WebSocket;
+var ws: WebSocket;
 
-    constructor(con: string) {
-        this.ws = new WebSocket(con);
-    }
+export const connect = (connection: string) => ws = new WebSocket(connection);
 
-    klientReceive(): void {
-        this.ws.onmessage = (msg) => console.log('klient receives: ', msg);
-    }
-}
+ws.onmessage = (data) => {
+    console.log('a message received');
+    console.log(data);
+    ws.close();
+};

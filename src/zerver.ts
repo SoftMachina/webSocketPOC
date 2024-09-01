@@ -13,8 +13,9 @@ export class Zerver {
         });
     }
 
-    public zerverSend(msg: string): void {
-        this.ws.clients.forEach(client => client.send(msg));
+    public zerverSend(msg: MessageEvent): void {
+        console.log("sending to clients: ", msg);
+        this.ws.clients.forEach(client => client.send(msg.data));
     }
 }
 

@@ -1,9 +1,8 @@
-export class Klient {
-    constructor(con) {
-        this.ws = new WebSocket(con);
-    }
-    klientReceive() {
-        this.ws.onmessage = (msg) => console.log('klient receives: ', msg);
-    }
-}
+var ws;
+export const connect = (connection) => ws = new WebSocket(connection);
+ws.onmessage = (data) => {
+    console.log('a message received');
+    console.log(data);
+    ws.close();
+};
 //# sourceMappingURL=klient.js.map

@@ -9,7 +9,8 @@ export class Zerver {
         });
     }
     zerverSend(msg) {
-        this.ws.clients.forEach(client => client.send(msg));
+        console.log("sending to clients: ", msg);
+        this.ws.clients.forEach(client => client.send(msg.data));
     }
 }
 //# sourceMappingURL=zerver.js.map
